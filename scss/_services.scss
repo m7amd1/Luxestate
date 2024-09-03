@@ -1,0 +1,64 @@
+.services { 
+  .container {
+    h2 {
+      font-size: 35px;
+    }
+    > p {
+      margin: 15px 0 50px 0;
+      width: 40%;
+      line-height: 1.8;
+    }
+    .row {
+      display: flex;
+      gap: 60px;
+      .img {
+        overflow: hidden;
+        flex: 1;
+        img {
+          height: 494px;
+        }
+      }
+      .text {
+        flex: 0.7;
+        display: flex;
+        justify-content: flex-end;
+        gap: 30px;
+        flex-flow: column wrap;
+        font-weight: 600;
+        h3 {
+          margin: 0 0 20px 7px;
+        }
+        p {
+          line-height: 1.8;
+          font-weight: normal;
+        }
+      }
+    }
+  } 
+}
+
+
+@include breakPoints(mobile) {
+  .services {
+    .container {
+      > p {
+        width: 100%;
+      }
+      .row {
+        flex-direction: column;
+        .img {
+          img {
+            height: auto;
+            width: 100%;
+          }
+        }
+        .text {
+          width: 100%;
+        }
+        .col {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

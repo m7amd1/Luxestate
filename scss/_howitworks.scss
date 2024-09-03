@@ -1,0 +1,119 @@
+.roadmap {
+  padding-top: 120px;
+  .container {
+    h2 {
+      font-size: 35px;
+    }
+    > p {
+      margin: 15px 0 50px 0;
+      width: 40%;
+      line-height: 1.8;
+    }
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-flow: row wrap;
+      .col {
+        flex: 1;
+        box-shadow: 0px 5px 14px #d3d3d3;
+        overflow: hidden;
+        display: flex;
+        flex-flow: column wrap;
+        gap: 20px;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 56px;
+        height: 400px;
+        position: relative;
+        &:nth-child(1)  {
+          background-color: $yellow;
+          &::before {
+            content: '01';
+            position: absolute;
+            top: -67px;
+            left: -14px;
+            font-size: 117px;
+            font-weight: 600;
+            color: $white;
+          }
+          span {
+            color: white;
+          }
+          p {
+            color: white;
+          }
+          a {
+            transition: .1s;
+            color: white;
+            &:hover {
+              border-bottom: 2px solid white;
+            }
+          }
+        }
+        &:nth-child(2) {
+          position: relative;
+          &::before {
+            content: '02';
+            position: absolute;
+            top: -67px;
+            left: -14px;
+            font-size: 117px;
+            font-weight: 600;
+            color: black;
+          }
+        }
+        &:nth-child(3) {
+          position: relative;
+          &::before {
+            content: '03';
+            position: absolute;
+            top: -67px;
+            left: -14px;
+            font-size: 117px;
+            font-weight: 600;
+            color: black;
+          }
+        }
+        a {
+          font-weight: bold;
+          transition: .1s;
+          padding: 10px 0;
+          font-size: 15px;
+          &:hover {
+            border-bottom: 2px solid black;
+          }
+        }
+        span {
+          font-weight: 600;
+          font-size: 18px;
+        }
+        span:first-child {
+          margin-right: 11px;
+          margin-left: -35px;
+        }
+        p {
+          line-height: 1.8;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@include breakPoints(mobile) {
+  .roadmap {
+    .container {
+      > p {
+        width: 100% !important;
+      }
+      .row {
+        flex-flow: column wrap !important;
+        .col {
+          padding: 85px;
+        }
+      }
+    }
+  }
+}

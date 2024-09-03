@@ -1,0 +1,108 @@
+header {
+  position: sticky;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  height: 75px;
+  line-height: 75px;
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      h1 {
+        font-size: 40px;
+        letter-spacing: -3px;
+        user-select: none;
+      }
+    }
+    nav {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .links {
+        height: 65px;
+        a {
+          display: inline-block;
+          font-size: 1rem;
+          font-weight: 600;
+          color: $darkBlue;
+          &:not(:last-child) {
+            margin-right: 15px;
+          }
+          &:nth-child(6) {
+            margin-left: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@include breakPoints(small) {
+  header {
+    .humberger {
+      display: none;
+    }
+    .links {
+      visibility: visible !important;
+      .colored {
+        width: 160px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        background-color: $yellow;
+        border-radius: 7px;
+        transition: .3s;
+        &:hover {
+          background-color: $darkBlue;
+          color: $white;
+        }
+      }
+    }
+  }
+} 
+
+@include breakPoints(mobile) {
+  header {
+    position: static;
+    nav {
+    .humberger {
+        display: flex !important;
+        font-size: 22px;
+        cursor: pointer;
+      }
+      .links {
+        z-index: 2;
+        display: flex !important;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $gray;
+        height: auto !important; 
+        padding: 15px;
+        margin-bottom: 100px;
+        visibility: visible;
+        a {
+          margin: 0 !important;
+          height: 50px;
+        }
+        .colored {
+          width: 100%;
+          line-height: inherit;
+          text-align: start;
+          background-color: $gray;
+          border-radius: 0;
+          transition: none;
+        }
+      }
+    }
+  }
+}

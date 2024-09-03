@@ -1,0 +1,43 @@
+// Scss Files 
+@import 'variable';
+@import './global';
+@import './helpers/clasess';
+@import '/scss/helpers/mixins';
+@import 'header';
+@import 'hero';
+@import 'stats';
+@import 'cards';
+@import 'howitworks';
+@import 'services';
+@import 'agents';
+@import 'joinus';
+@import 'footer';
+
+// Container
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Small Screen
+@media (min-width: 576px) {
+  .container {
+    width: 750px;
+  }
+}
+
+// Medium Screen
+@media (min-width: 768px) {
+  .container {
+    width: 970px;
+  }
+}
+
+// Large Screen
+@media (min-width: 992px) {
+  .container {
+    width: 1170px;
+  }
+}

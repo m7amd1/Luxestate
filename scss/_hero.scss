@@ -1,0 +1,103 @@
+@include breakPoints(small) {
+  .hero {
+    overflow: hidden;
+    height: calc(100vh - 90px);
+    padding-top: 5% !important;
+    .row {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      gap: 20px;
+      .text {
+        padding-top: 9%;
+        position: relative;
+        z-index: 999;
+        flex: 1;
+        flex-flow: row wrap;
+        h1 {
+          font-size: 35px;
+          margin-bottom: 30px;
+          span {
+            text-transform: lowercase;
+            color: $white;
+            position: relative;
+            left: -8px;
+          }
+        }
+        .input {
+          display: flex;
+          input {
+            border: 0;
+            border-left: 2px solid $yellow;
+            outline: 0;
+            width: 100%;
+            height: 45px;
+            padding-left: 10px;
+            caret-color: $yellow;
+            font-size: 15px;
+            color: $darkBlue;
+            display: inline-block;
+            &::placeholder {
+              color: $darkBlue;
+              opacity: .7;
+              font-size: 14px;
+            }
+          }
+          .search {
+            position: relative;
+            left: -56px;
+            top: 0;
+            background-color: $yellow;
+            color: $darkBlue;
+            height: 45px;
+            width: 70px;
+            line-height: 45px;
+            font-size: 13px;
+            letter-spacing: -1px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: 600;
+          }
+        }
+      }
+      .img {
+        flex: 2;
+        img {
+          display: block;
+          height: 600px;
+          width: 135.5%;
+          position: relative;
+          left: -264px;
+        }
+      }
+    }
+  }
+}
+
+
+@include breakPoints(mobile){
+  .hero {
+    position: relative;
+    padding-top: 120px;
+    .text {
+      h1 {
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        span {
+          position: absolute;
+          text-transform: uppercase;
+        }
+      }
+      input,
+      .search {
+        display: none;
+      }
+    }
+    .img {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+.cards {
+  padding-top: 120px;
+  background-color: $gray;
+  h2 {
+    margin-bottom: 25px;
+  }
+  .row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 60px 35px;
+    flex-flow: row wrap;
+    .card {
+      box-shadow: 0px 5px 14px #d3d3d3;
+      width: 350px;
+      overflow: hidden;
+      margin-bottom: 50px;
+      .info {
+        background-color: $white;
+        margin-top: 15px;
+        padding: 20px;
+        h4 {
+          font-size: 15px;
+          margin-bottom: 17px;
+        }
+        .more-info {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          span {
+            color: $yellow;
+            font-size: 20px;
+            font-weight: bold;
+          }
+          p {
+            i {
+              margin: 0 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .input {
+    display: flex;
+    flex-flow: row wrap;
+    input {
+      border: none;
+      border-left: 2px solid $yellow;
+      outline: 0;
+      width: 400px;
+      height: 45px;
+      padding-left: 10px;
+      caret-color: $yellow;
+      font-size: 15px;
+      color: $darkBlue; 
+      display: inline-block;
+      &::placeholder {
+        color: $darkBlue;
+        opacity: .7;
+        font-size: 14px;
+      }
+    }
+    .search {
+      display: inline-block;
+      position: relative;
+      left: -56px;
+      top: 0;
+      background-color: $yellow;
+      color: $darkBlue;
+      height: 45px;
+      width: 70px;
+      line-height: 45px;
+      font-size: 13px;
+      letter-spacing: -1px;
+      border-radius: 5px;
+      text-align: center;
+      font-weight: 600;
+    }
+    .btn {
+      display: inline-block;
+      background-color: $white;
+      min-width: 200px;
+      height: 45px;
+      line-height: 47px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 6px;
+    }
+  }
+}
+
+@include breakPoints(mobile) {
+  .cards {
+    overflow-x: hidden;
+    .row {
+      flex-flow: column;
+    }
+    .btn {
+      margin-top: 20px;
+    }
+    .search {
+      display: none !important;
+    }
+  }
+}
